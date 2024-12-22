@@ -5,24 +5,30 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PWA Camera</title>
-    -
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="manifest" href="manifest.json" />
-    <link rel="apple-touch-icon" href="/images/icon-256_ios.png" />
+    <link rel="apple-touch-icon" href="/images/icon-256_IOS.png" />
     <link rel="icon" href="/images/camera_256.png" sizes="256x256" />
     <meta name="theme-color" content="white" />
   </head>
   <body>
-    <!-- Camera -->
     <main id="camera">
-      <!-- Camera sensor (lente) -->
+      <!-- Camera sensor -->
       <canvas id="camera--sensor"></canvas>
-      <!-- Camera view (visualização) -->
+      <!-- Camera view -->
       <video id="camera--view" autoplay playsinline></video>
       <!-- Camera output -->
-      <img src="//:0" alt="" id="camera--output" />
-      <!-- Camera botão de tirar foto -->
-      <button id="camera--trigger">tirar foto</button>
+      <img src="//:0" alt="Imagem capturada pela câmera" id="camera--output" />
+      <!-- Botões -->
+      <div>
+        <button id="camera--trigger" aria-label="Tirar foto">Tirar foto</button>
+        <button id="camera--switch" aria-label="Trocar câmera">Trocar câmera</button>
+      </div>
+      <!-- Exibição das últimas fotos -->
+      <section id="last-photos">
+        <h3>Últimas Fotos</h3>
+        <div id="photo-gallery"></div>
+      </section>
     </main>
     <script src="js/main.js" type="module"></script>
   </body>
